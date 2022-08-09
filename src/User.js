@@ -19,7 +19,7 @@ function User(props) {
 				<Modal.Header closeButton>
 					<Modal.Title>  <h4 className="h4">Add a new contact</h4></Modal.Title>
 				</Modal.Header>
-				<EditUser editUser={props.editUser} userContact={props.userContact} />
+				<EditUser editUser={props.editUser} userContact={props.userContact}  />
 				
 			</Modal>
 			<Col  style={{ width: "12rem", marginBottom: "10px" }}>
