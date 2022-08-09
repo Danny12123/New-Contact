@@ -8,7 +8,12 @@ function Contact(props) {
             <Container>
                 <Row>
                     {props.contactData.map((item, index) => {
-                        return <User key={index} userContact={item} />
+                        return <User 
+                            key={index} 
+                            userContact={item} 
+                            delete={props.delete}
+                            editUser={ props.editUser}
+                            />
                     })}
                 </Row>
             </Container>

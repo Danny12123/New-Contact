@@ -7,17 +7,38 @@ import "./holder.css";
 
 const Holder = () => {
     const [usersContact, setUsersContact] = useState([
-		{ name: " Naa", contact: " 024443536", location: " Ghana" },
-		{ name: " Wini", contact: " +1 244535645", location: " USA" },
+		{ name: " Naa", contact: " 024443536", location: " Ghana", id: "vsdvsdvc " },
+		{ name: " Wini", contact: " +1 244535645", location: " USA", id: "sesfsdv" },
 	]);
    const addContact = (user) => {
 		setUsersContact([...usersContact, user]);
+    
 	};
+  const deleteUser = (id) => {
+    setUsersContact(
+      usersContact.filter((usersContact) => {
+        if (usersContact.id !== id) {
+          return usersContact;
+        }
+      })
+    )
+  }
+  const Edituser = (id, newData) => {
+    setUsersContact(
+      usersContact.map((user) => {
+        if (user.id === id) {
+          return newData
+        }
+        return user;
+      })
+    )
+  }
+
   return (
     <div className='holder'>
         <Container>
             <FormCom newContact={addContact} />
-            <Contact contactData={usersContact} />
+            <Contact contactData={usersContact} delete={deleteUser} editUser={Edituser} />
         </Container>
       
     </div>
