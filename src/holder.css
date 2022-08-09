@@ -1,9 +1,10 @@
 .holder {
-    width: 50%;
+    width: 100%;
     height: inherit;
     background-color: #101024;
     border-radius: 10px;
     margin: auto;
+    text-align: center;
 }
 
 .h4, .h5, h6 {
