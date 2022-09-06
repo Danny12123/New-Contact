@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import "./holder.css";
+import { connect, Connect } from "react-redux";
+import {ADDNEW_USER} from "../src/Action/UserAction";
+import { v4 as uuidv4 } from 'uuid';
 
 const FormCom = (props) => {
     const [name, setName] = useState("");
@@ -9,7 +12,7 @@ const FormCom = (props) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		props.newContact({ name, contact, location });
+		props.ADDNEW_USER({ name, contact, location, id: uuidv4() });
 		setName("");
 		setContact("");
 		setLocation("");
@@ -53,5 +56,8 @@ const FormCom = (props) => {
     </div>
   )
 }
+const mapDispatch = {
+    ADDNEW_USER
+}
 
-export default FormCom
+export default connect(null, mapDispatch)(FormCom)

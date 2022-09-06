@@ -7,8 +7,8 @@ import "./holder.css";
 
 const Holder = () => {
     const [usersContact, setUsersContact] = useState([
-		{ name: " Naa", contact: " 024443536", location: " Ghana", id: "vsdvsdvc " },
-		{ name: " Wini", contact: " +1 244535645", location: " USA", id: "sesfsdv" },
+		// { name: " Naa", contact: " 024443536", location: " Ghana", id: "vsdvsdvc " },
+		// { name: " Wini", contact: " +1 244535645", location: " USA", id: "sesfsdv" },
 	]);
    const addContact = (user) => {
 		setUsersContact([...usersContact, user]);

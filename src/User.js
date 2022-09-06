@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { Card, Col } from "react-bootstrap";
 import EditUser from './EditUser';

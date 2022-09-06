@@ -1,13 +1,17 @@
 import React from "react";
 import User from "./User";
 import { Row, Container } from "react-bootstrap";
+import { connect, useSelector } from "react-redux";
 
 function Contact(props) {
+    const {users} =  useSelector((state) => {
+        return state
+    }) 
 	return (
         <div>
             <Container>
                 <Row>
-                    {props.contactData.map((item, index) => {
+                    {users.map((item, index) => {
                         return <User 
                             key={index} 
                             userContact={item} 
@@ -22,4 +26,11 @@ function Contact(props) {
 	);
 }
 
+// const mapstate = (state) => {
+//     return (
+//         users: state.users,
+//     )
+// }
+
+// export default connect(mapstate) (Contact);
 export default Contact;
