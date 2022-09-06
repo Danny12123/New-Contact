@@ -4,7 +4,7 @@ let initialState = {users:[
 	]}
 
 
-const Reducer = (state = initialState) => {
+const Reducer = (state = initialState, action) => {
     return state;
 }
 export default Reducer
