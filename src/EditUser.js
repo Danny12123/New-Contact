@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import "./edit.css";
+import {EDITUSER} from "./Action/Eidtuser";
 
+
+import { useDispatch } from "react-redux";
 
 const EditUser = (props) => {
+     const dispatch = useDispatch();
     const [name, setName] = useState(props.userContact.name);
 	const [contact, setContact] = useState(props.userContact.contact);
 	const [location, setLocation] = useState(props.userContact.location);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		props.newContact( props.userContact.id, { name, contact, location });
+         dispatch(EDITUSER({ id: props.userContact.id, name, contact, location }));
+		// props.EDITUSER( props.userContact.id, { name, contact, location });
 		setName("");
 		setContact("");
 		setLocation("");
@@ -54,5 +59,9 @@ const EditUser = (props) => {
     </div>
   )
 }
+// const mapDispatch = {
+//     EDITUSER,
+// }
 
-export default EditUser;
+export default  EditUser;
+// connect(null, mapDispatch)(

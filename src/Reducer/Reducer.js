@@ -9,8 +9,18 @@ const Reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case "ADD_NEW_USER":
 			return {...state,  users : [...state.users, action.payload]}
-			break;
-	
+		case "DELETE_USER":
+			const tempUser = state.users.filter((user) => user.id !== action.payload);
+			return { ...state, users: tempUser };	
+		case "EDIT_USER":
+      		const temp = state.users.map((item) => {
+        	if (item.id === action.payload.data.id) {
+          		return action.payload.data;
+        	} else {
+          		return item;
+        	}
+      		});
+      		return { ...state, users: temp };
 		default:
 			return state;
 	}

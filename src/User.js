@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { Card, Col } from "react-bootstrap";
 import EditUser from './EditUser';
-
+import {DELETEUSER} from "./Action/UserAction";
+import { connect } from 'react-redux';
 
 function User(props) {
 	const headleEdit = () => {
-		props.delete(props.userContact.id);
+		props.DELETEUSER(props.userContact.id);
 	}
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
@@ -41,5 +42,9 @@ function User(props) {
 		</>
 	);
 }
+const mapD = {
 
-export default User;
+	DELETEUSER,
+}
+
+export default connect(null, mapD)(User);

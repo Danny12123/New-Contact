@@ -17,6 +17,7 @@ const FormCom = (props) => {
 		setContact("");
 		setLocation("");
 	};
+    
   return (
     <div>
         <h4 className="h4">Add a new contact</h4>

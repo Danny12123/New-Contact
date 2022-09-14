@@ -11,8 +11,7 @@ const Holder = () => {
 		// { name: " Wini", contact: " +1 244535645", location: " USA", id: "sesfsdv" },
 	]);
    const addContact = (user) => {
-		setUsersContact([...usersContact, user]);
-    
+		setUsersContact([...usersContact, user])
 	};
   const deleteUser = (id) => {
     setUsersContact(
