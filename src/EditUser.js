@@ -59,9 +59,5 @@ const EditUser = (props) => {
     </div>
   )
 }
-// const mapDispatch = {
-//     EDITUSER,
-// }
 
 export default  EditUser;
-// connect(null, mapDispatch)(

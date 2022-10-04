@@ -17,7 +17,7 @@ function User(props) {
 		<>
 			<Modal show={show} onHide={handleClose}>
 				<Modal.Header closeButton>
-					<Modal.Title>  <h4 className="h4">Add a new contact</h4></Modal.Title>
+					<Modal.Title>  <h4 className="h4">Edit contact</h4></Modal.Title>
 				</Modal.Header>
 				<EditUser editUser={props.editUser} userContact={props.userContact}  />
 				
