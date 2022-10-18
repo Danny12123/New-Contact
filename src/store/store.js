@@ -4,4 +4,4 @@ import  Reducer  from "../Reducer/Reducer";
 let Store = createStore(Reducer) 
 
 
-export default Store
+export default Store;

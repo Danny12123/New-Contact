@@ -8,7 +8,7 @@ let initialState = {users:[
 const Reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case "ADD_NEW_USER":
-			return {...state,  users : action.payload}
+			return {...state,  users: action.payload}
 		case "DELETE_USER":
 			const tempUser = state.users.filter((user) => user.id !== action.payload);
 			return { ...state, users: tempUser };	
