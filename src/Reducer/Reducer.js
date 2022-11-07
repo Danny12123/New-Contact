@@ -1,8 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
-let initialState = {users:[
+let initialState = {
+	users:	[
 		// { name: " Naa", contact: " 024443536", location: " Ghana", id: uuidv4() },
 		// { name: " Wini", contact: " +1 244535645", location: " USA", id: uuidv4() },
-	]}
+	]
+}
 
 
 const Reducer = (state = initialState, action) => {
@@ -18,7 +20,7 @@ const Reducer = (state = initialState, action) => {
           		return action.payload.data;
         	} else {
           		return item;
-        	}
+        	} 
       		});
       		return { ...state, users: temp };
 		default:

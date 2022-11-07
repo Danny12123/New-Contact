@@ -9,7 +9,6 @@ import { db } from "./firebase/configuer";
 
 
 
-
 const FormCom = (props) => {
     const [name, setName] = useState("");
 	const [contact, setContact] = useState("");
